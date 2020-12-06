@@ -1,0 +1,80 @@
+[
+  {
+    "ymd": "20201201",
+    "morning": 210,
+    "noon": 0,
+    "evening": 400
+  },
+  {
+    "ymd": "20201202",
+    "morning": 0,
+    "noon": 0,
+    "evening": 200
+  },
+  {
+    "ymd": "20201203",
+    "morning": 0,
+    "noon": 100,
+    "evening": 200
+  },
+  {
+    "ymd": "20201204",
+    "morning": 50,
+    "noon": 0,
+    "evening": 0
+  },
+  {
+    "ymd": "20201205",
+    "morning": 0,
+    "noon": 0,
+    "evening": 0
+  },
+  {
+    "ymd": "20201206",
+    "morning": 100,
+    "noon": 0,
+    "evening": 0
+  },
+  {
+    "ymd": "20201207",
+    "morning": 0,
+    "noon": 50,
+    "evening": 0
+  },
+  {
+    "ymd": "20201208",
+    "morning": 0,
+    "noon": 0,
+    "evening": 0
+  },
+  {
+    "ymd": "20201209",
+    "morning": 0,
+    "noon": 100,
+    "evening": 200
+  },
+  {
+    "ymd": "20201210",
+    "morning": 200,
+    "noon": 0,
+    "evening": 200
+  },
+  {
+    "ymd": "20201211",
+    "morning": 0,
+    "noon": 0,
+    "evening": 200
+  },
+  {
+    "ymd": "20201212",
+    "morning": 0,
+    "noon": 0,
+    "evening": 200
+  },
+  {
+    "ymd": "20201213",
+    "morning": 0,
+    "noon": 0,
+    "evening": 200
+  }
+]
