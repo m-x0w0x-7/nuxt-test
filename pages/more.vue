@@ -11,21 +11,16 @@
         <span class="evening">{{ item.evening }}</span>
       </li>
     </ul>
-    <button
-      v-if="(ListItems.length - count) >= 0"
-      class="st-motto st-button medium-button blue"
-      type="button"
-      @click="isMore"
-    >
-      もっとみる
-    </button>
+    <Button @is-more-parent="isMoreParent" />
   </div>
 </template>
 
 <script>
 import history from '~/data/history.json'
+import Button from '~/components/Button.vue'
 
 export default {
+  components: { Button },
   data () {
     return {
       history: history,
@@ -39,7 +34,7 @@ export default {
     }
   },
   methods: {
-    isMore() {
+    isMoreParent() {
       this.count += 4
     }
   }
