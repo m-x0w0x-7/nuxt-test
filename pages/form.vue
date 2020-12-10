@@ -5,13 +5,20 @@
       <div class="field">
         <label class="label">お名前</label>
           <div class="control">
-            <text-field-with-validation v-model="textValue" rules="required" fieldname="お名前" />
+            <text-field-with-validation v-model="textValue" rules="required" fieldname="お名前" inputType="text" />
         </div>
       </div>
       <div class="field">
         <label class="label">メールアドレス</label>
           <div class="control">
-            <text-field-with-validation v-model="emailValue" rules="required|email" fieldname="メールアドレス" />
+            <text-field-with-validation v-model="emailValue" rules="required|email" fieldname="メールアドレス" inputType="email" />
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">パスワード</label>
+          <div class="control">
+            <text-field-with-validation v-model="passwordValue" rules="required" fieldname="パスワード" :inputType="inputStatus" />
+            <input type="checkbox" v-model="isChecked">表示する
         </div>
       </div>
       <div class="field">
@@ -37,7 +44,14 @@ export default {
   data () {
     return {
       textValue: '',
-      emailValue: ''
+      emailValue: '',
+      passwordValue: '',
+      isChecked: false,
+    }
+  },
+  computed: {
+    inputStatus: function() {
+      return this.isChecked ? "text" : "password";
     }
   },
   methods: {

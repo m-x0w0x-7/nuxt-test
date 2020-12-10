@@ -3,6 +3,7 @@
     <input
        v-model="innerValue"
       :placeholder="fieldname"
+      :type="inputType"
     />
     <p v-show="errors.length" class="help is-danger">
       {{ errors[0] }}
@@ -23,6 +24,10 @@ export default {
       required: true
     },
     fieldname: {
+      type: String,
+      required: true
+    },
+    inputType: {
       type: String,
       required: true
     }
