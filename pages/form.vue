@@ -25,7 +25,7 @@
       <div class="field">
         <label class="label">パスワード</label>
           <div class="control">
-            <text-field-with-validation v-model="passwordValue" rules="required" fieldname="パスワード" :inputType="inputStatus" inputName="password" />
+            <text-field-with-validation v-model="passwordValue" rules="required|min:8|alpha_num" fieldname="パスワード" :inputType="inputStatus" inputName="password" />
             <input type="checkbox" v-model="isChecked">表示する
         </div>
       </div>
