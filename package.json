@@ -11,7 +11,9 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6",
-    "v-calendar": "^2.1.1"
+    "v-calendar": "^2.1.1",
+    "v-tooltip": "^2.0.3",
+    "vee-validate": "^4.0.4"
   },
   "devDependencies": {}
 }
