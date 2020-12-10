@@ -29,6 +29,29 @@
             <input type="checkbox" v-model="isChecked">表示する
         </div>
       </div>
+
+      <div class="field">
+        <select-form
+          v-model="option1"
+          :options="options1"
+          placeholder="選択してください"
+          fieldName="Selectbox"
+          rules="required"
+        />
+        <p>select: {{ option1 }}</p>
+      </div>
+
+      <div class="field">
+        <radio-form
+          v-model="option2"
+          :options="options2"
+          field-name="Radio"
+          rules="required"
+        />
+        <p>radio: {{ option2 }}</p>
+      </div>
+
+
       <div class="field">
           <div class="control">
             <button class="button is-link" :disabled="invalid">送信する</button>
@@ -44,10 +67,14 @@
 
 <script>
 import TextFieldWithValidation from '@/components/TextFieldWithValidation'
+import SelectForm from '@/components/SelectForm'
+import RadioForm from '@/components/RadioForm'
 
 export default {
   components: {
-    TextFieldWithValidation
+    TextFieldWithValidation,
+    SelectForm,
+    RadioForm
   },
   data () {
     return {
@@ -57,6 +84,25 @@ export default {
       passwordValue: '',
       passwordConfValue: '',
       isChecked: false,
+      option1: '',
+      options1: [
+        { label: 'Option 1', value: '1' },
+        { label: 'Option 2', value: '2' },
+        { label: 'Option 3', value: '3' },
+        { label: 'Option 4', value: '4' },
+        { label: 'Option 5', value: '5' },
+      ],
+      option2: '',
+      options2: [
+        { label: 'Option 1', value: '1' },
+        { label: 'Option 2', value: '2' },
+        { label: 'Option 3', value: '3' },
+        { label: 'Option 4', value: '4' },
+        { label: 'Option 5', value: '5' },
+        { label: 'Option 6', value: '6' },
+        { label: 'Option 7', value: '7' },
+        { label: 'Option 8', value: '8' },
+      ]
     }
   },
   computed: {
