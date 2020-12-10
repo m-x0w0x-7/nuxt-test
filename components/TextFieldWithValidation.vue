@@ -1,9 +1,10 @@
 <template>
-  <validation-provider v-slot="{ errors }" :rules="rules" :name="fieldname">
+  <validation-provider v-slot="{ errors }" :rules="rules" :name="fieldname" :vid="inputVid">
     <input
        v-model="innerValue"
       :placeholder="fieldname"
       :type="inputType"
+      :name="inputName"
     />
     <p v-show="errors.length" class="help is-danger">
       {{ errors[0] }}
@@ -30,7 +31,15 @@ export default {
     inputType: {
       type: String,
       required: true
-    }
+    },
+    inputName: {
+      type: String,
+      required: true
+    },
+    inputVid: {
+      type: String,
+      required: false
+    },
   },
   computed: {
     innerValue: {

@@ -11,12 +11,14 @@ import {
 import ja from "vee-validate/dist/locale/ja.json"
 
 // 使用するvalidate rule
-import { required, max, email, numeric, regex } from "vee-validate/dist/rules"
+import { required, max, email, numeric, regex, confirmed } from "vee-validate/dist/rules"
 extend("required", required)
 extend("email", email)
 extend("max", max)
 extend("numeric", numeric)
 extend("regex", regex)
+extend("confirmed", confirmed)
+
 
 Vue.component("ValidationProvider", ValidationProvider)
 Vue.component("ValidationObserver", ValidationObserver)

@@ -5,19 +5,27 @@
       <div class="field">
         <label class="label">お名前</label>
           <div class="control">
-            <text-field-with-validation v-model="textValue" rules="required" fieldname="お名前" inputType="text" />
+            <text-field-with-validation v-model="textValue" rules="required" fieldname="お名前" inputType="text" inputName="name" />
         </div>
       </div>
       <div class="field">
         <label class="label">メールアドレス</label>
           <div class="control">
-            <text-field-with-validation v-model="emailValue" rules="required|email" fieldname="メールアドレス" inputType="email" />
+            <text-field-with-validation v-model="emailValue" rules="required|email" fieldname="メールアドレス" inputType="email" inputName="email" inputVid="emailVid" />
+            <p>メールアドレス：{{ emailValue }}</p>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">メールアドレス（確認）</label>
+          <div class="control">
+            <text-field-with-validation v-model="emailComfirmValue" rules="required|email|confirmed:emailVid" fieldname="メールアドレス（確認）" inputType="email" inputName="emailConfirm" />
+            <p>メールアドレス：{{ emailComfirmValue }}</p>
         </div>
       </div>
       <div class="field">
         <label class="label">パスワード</label>
           <div class="control">
-            <text-field-with-validation v-model="passwordValue" rules="required" fieldname="パスワード" :inputType="inputStatus" />
+            <text-field-with-validation v-model="passwordValue" rules="required" fieldname="パスワード" :inputType="inputStatus" inputName="password" />
             <input type="checkbox" v-model="isChecked">表示する
         </div>
       </div>
@@ -45,7 +53,9 @@ export default {
     return {
       textValue: '',
       emailValue: '',
+      emailComfirmValue: '',
       passwordValue: '',
+      passwordConfValue: '',
       isChecked: false,
     }
   },
@@ -69,3 +79,13 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.is-danger {
+  font-size: 14px;
+  color: rgb(255, 138, 138);
+}
+.field {
+  margin-bottom: 40px;
+}
+</style>
